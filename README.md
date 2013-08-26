@@ -13,8 +13,10 @@
 Using the provided json file, Create a small HTML/CSS/javascript application with the following functionality:
 
 * List all of the characters and associated data in the DOM
-* Filter by number of episodes.
-* Sort by character name, house, episodes and actor name
+* Filter by the "house" property
+* Make the list sortable by the "name", "house", "episodes" and "actor" property.
 
 ## Notes
-Feel free to fill in any gaps that may be missing in the mock. Add any magic as you see necessary.
+* Lay out the data in the DOM as you see fit.
+* Use any libraries you like.
+
