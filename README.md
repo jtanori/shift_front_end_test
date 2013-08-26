@@ -17,6 +17,6 @@ Using the provided json file, Create a small HTML/CSS/javascript application wit
 * Make the list sortable by the "name", "house", "episodes" and "actor" property.
 
 ## Notes
-* Lay out the data in the DOM as you see fit.
+* Lay out the data in the DOM and style as you see fit.
 * Use any libraries you like.
 
