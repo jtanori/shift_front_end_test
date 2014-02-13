@@ -1,0 +1,21 @@
+nav.navbar.navbar-default(role='navigation')
+	span.navbar-brand Characters
+	form.navbar-form(role='search')
+		.form-group#mainGroup
+			input.form-control(type='text', placeholder='Filter')
+			button.btn.btn-link.hide#clear(type='reset')
+				.glyphicon.glyphicon-remove-sign
+		.form-group
+			button.btn.btn-default(type='submit') Go!
+
+ul.nav.nav-pills
+	li.sort(data-sort-by='name')
+		a Name
+	li.sort(data-sort-by='house')
+		a House
+	li.sort(data-sort-by='episodes')
+		a Episodes
+	li.sort(data-sort-by='actor')
+		a Actor
+
+ul.listview.list-unstyled.clearfix#characters

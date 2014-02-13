@@ -1,0 +1,15 @@
+// We could have created a view file for specific view attributes
+// but for the sake of simplicity lets put the styles for the "grid"
+// in this file
+
+@import 'sass-bootstrap/lib/variables';
+
+.item {
+	min-height: 180px;
+	margin-bottom: 1em;
+	//position: relative;
+
+	&>.clearfix {
+		
+	}
+}
