@@ -15,3 +15,17 @@ Using the provided json file, Create a small HTML/CSS/javascript application wit
 * Lay out the data in the DOM and style as you see fit.
 * Use any libraries you like.
 
+## Requirements
+* [Node.js](http://nodejs.org)
+* [NPM](https://www.npmjs.org)
+* [Yeoman.io](http://yeoman.io)
+
+## Install
+Run the following commands after cloning this repo
+* $ npm install
+* $ bower install
+
+## Run
+* $ grunt server
+
+You can additionally run other yeoman command for different project stages (test, build, etc...)
