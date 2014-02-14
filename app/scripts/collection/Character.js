@@ -1,5 +1,7 @@
-/* global Backbone */
+/* global Backbone, define, alert */
 define(function(require){
+	'use strict';
+
 	var model = require('model/Character');
 	return Backbone.Collection.extend({
 		model: model,
@@ -20,7 +22,7 @@ define(function(require){
 		setComparator: function(attribute){
 			this.comparator = function(model){
 				return model.get(attribute);
-			}
+			};
 
 			return this;
 		},
@@ -48,5 +50,5 @@ define(function(require){
 				return filtered;
 			}
 		}
-	})
+	});
 });

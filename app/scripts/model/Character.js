@@ -1,5 +1,7 @@
-/* global Backbone */
-define(function(require){
+/* global Backbone, define, console */
+define(function(){
+	'use strict';
+
 	return Backbone.Model.extend({
 		url: '',
 		defaults: {
@@ -8,5 +10,5 @@ define(function(require){
 		initialize: function(){
 			console.log('initialize character model');
 		}
-	})
+	});
 });

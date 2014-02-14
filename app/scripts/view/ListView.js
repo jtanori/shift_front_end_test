@@ -1,5 +1,7 @@
-/* global Backbone, _, $ */
+/* global Backbone, _, $, alert, console, define */
 define(function(require){
+	'use strict';
+
 	// Let's go with something simple and lets the main view
 	// act as controller
 	var index = Backbone.View.extend(
@@ -20,12 +22,13 @@ define(function(require){
 				this.collection = this.constructor.collection();
 
 				//Listen for changes in the collection
-				this.listenTo(this.collection, 'reset', this.addAll, this);
-				this.listenTo(this.collection, 'add', this.addOne, this);
-				this.listenTo(this.collection, 'sort', this.sort, this);
+				this.listenTo(this.collection, 'reset', this.addAll,  this);
+				this.listenTo(this.collection, 'add',   this.addOne,  this);
+				this.listenTo(this.collection, 'sort',  this.sort,    this);
+				this.listenTo(this.collection, 'error', this.onError, this);
 
 				if( options && _.isArray(options.models) ){
-					this.collection.reset(options.models);	
+					this.collection.reset(options.models);
 				}else{
 					this.collection.fetch();
 				}
@@ -97,7 +100,7 @@ define(function(require){
 					// Do initial sort on the collection models
 					this.collection.setComparator(sortBy).sort();
 				}catch(e){
-					alert('Can not sort by using that option yet.')
+					alert('Can not sort by using that option yet.');
 					console.log(e, e.message, e.stack);
 				}
 			},
@@ -105,6 +108,10 @@ define(function(require){
 			sort: function(){
 				this.dom.listview.empty();
 				this.addAll();
+			},
+
+			onError: function(){
+				this.dom.listview.html('<li>No characters found :(</li>');
 			},
 			// Dispose the view
 			close: function(remove){
@@ -115,7 +122,7 @@ define(function(require){
 					this.remove();
 				}
 			}
-		}, 
+		},
 		// "Class" methods
 		{
 			//Initialize collection
@@ -145,6 +152,5 @@ define(function(require){
 			}
 		}
 	);
-
-return index;
+	return index;
 });

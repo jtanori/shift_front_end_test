@@ -9,19 +9,19 @@ require.config({
         ListView: 'view/ListView'//App for some, ListView for me
     },
     shim: {
-    	jquery: {
-    		exports: '$'
-    	},
-    	lodash: {
-    		exports: '_'
-    	},
-    	backbone: {
-    		deps: ['jquery', 'lodash'],
-    		exports: 'Backbone'
-    	},
-    	ListView: {
-    		deps: ['backbone']
-    	}
+        jquery: {
+            exports: '$'
+        },
+        lodash: {
+            exports: '_'
+        },
+        backbone: {
+            deps: ['jquery', 'lodash'],
+            exports: 'Backbone'
+        },
+        ListView: {
+            deps: ['backbone']
+        }
     }
 });
 
@@ -29,7 +29,7 @@ require(['jquery', 'lodash', 'backbone', 'ListView'], function ($, _, Backbone, 
     'use strict';
     // Renders on initialize and fetch collection
     var Characters = new ListView();
-    window.Characters = Characters;
+    
     //DOM it!
     $('#listview').html(Characters.$el);
 });

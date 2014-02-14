@@ -1,5 +1,7 @@
-/* global Backbone */
+/* global Backbone, alert, console, define */
 define(function(require){
+	'use strict';
+
 	//Load the template
 	var template = require('templates/listItem');
 	
@@ -25,7 +27,7 @@ define(function(require){
 			// this is just to make it less bloathed in the "controller" side
 			var data;
 			try{
-				var data = this.model.toJSON();
+				data = this.model.toJSON();
 			}catch(e){
 				console.log(e, e.messsge, e.stack);
 			}finally{
