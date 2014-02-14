@@ -28,4 +28,9 @@ Run the following commands after cloning this repo
 ## Run
 * $ grunt server
 
+## Build
+* $ grunt
+
+Build command has been runned a couple of times and tested in a localhost environment and reported to be working as expected, feel free to do your own build and point your local server to the "dist" directory for running the production build.
+
 You can additionally run other yeoman command for different project stages (test, build, etc...)
