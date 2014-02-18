@@ -1,8 +1,8 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
-        backbone: '../bower_components/backbone/backbone-min',
-        lodash: '../bower_components/lodash/dist/lodash.min',
+        backbone: '../bower_components/backbone/backbone',
+        underscore: '../bower_components/lodash/dist/lodash.min',
         aspect: '../bower_components/aspect.js/src/aspect',
         functional: '../bower_components/aspect.js/src/functional',
         jade: 'templates/jade',
@@ -12,11 +12,11 @@ require.config({
         jquery: {
             exports: '$'
         },
-        lodash: {
+        underscore: {
             exports: '_'
         },
         backbone: {
-            deps: ['jquery', 'lodash'],
+            deps: ['jquery', 'underscore'],
             exports: 'Backbone'
         },
         ListView: {
@@ -25,7 +25,7 @@ require.config({
     }
 });
 
-require(['jquery', 'lodash', 'backbone', 'ListView'], function ($, _, Backbone, ListView) {
+require(['jquery', 'underscore', 'backbone', 'ListView'], function ($, _, Backbone, ListView) {
     'use strict';
     // Renders on initialize and fetch collection
     var Characters = new ListView();
